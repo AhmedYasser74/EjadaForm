@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <link rel="stylesheet" href="/Form copy.css">
+    <body>
+        <h1>Hello Ejada Employee <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAeh_Pcb7F2yQ6XPh9x3P1BlQhktpAPuV_6CJRtK_2pA&s" id="ejada"> </h1>
+        
+        <form action="http://localhost:5500/Signup/submit" method="POST" id="signup">
+            <label for="FName" style="color: darkblue;"><b>First Name:&nbsp; &nbsp </b></label>&nbsp;
+      <input type="text" name="FName"  id="FName" onfocus="value=''" onchange="CheckName(id,'err')" >  <span id="err"></span><br><br>
+      <label for="LName" style="color: darkblue;"><b>Last Name:&nbsp; &nbsp</b></label>&nbsp;
+      <input type="text" name="LName"  id="LName" onchange="CheckName(id,'err2')"><span id="err2"></span><br><br>
+      <label for="Number" style="color: darkblue;"><b>Number:&nbsp; &nbsp;&nbsp;&nbsp;</b></label> &nbsp; &nbsp;
+      <input type="text" name="Number"  id="Number" onchange="CheckNumber(id,'err3')" ><span id="err3"></span> <br> <br>
+    
+    <div id="Pass"><label for="password1">Password:&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;</label>
+        <input type="password" name="password1" id="password1" > <br></div>  
+      <label for="password2" style=" font-weight: 600; color: darkblue; position: relative; right: 10px;">Confirm Password:</label>
+      <input type="password" name="password2" id="password2" oninput="PassCheck()" style="margin: 10px;position: relative; right: 20px;"">
+      <span id="err4" style="color:red;"></span> <br>
+      <button  type="button"  id="submit"  onclick="Submit()"> <b>Signup</b></button>
+    
+     
+        </form>
+    
+        
+    
+    
+    
+        <script src="/DataCheck.js"></script>
+       
+    </body>
+    </html>
+</body>
+</html>

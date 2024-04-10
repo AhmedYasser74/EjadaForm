@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="/signin.css">
+<body>
+  <h1 id="H1">Hello <%= FN %> <%= LN%> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAeh_Pcb7F2yQ6XPh9x3P1BlQhktpAPuV_6CJRtK_2pA&s" id="ejada"> </h1>
+  
+    <h2>Your Phone Number is <%=PN%></h2>
+    
+    <form action="http://localhost:5500/submit\AddTask" method="post" id>
+        <label for="task"></label>
+   <input type="text" name="task" id="task" oninput="DisplayData()">
+   <button type="button" id="btn" onclick="AddTask()"  >Add Task </button>
+   <h1>Your Tasks</h1>
+   
+    </form>
+    <div id="lists">
+    
+      <!-- <p id="tasks"><%= Tasks %> <input type="checkbox" name="done" id="done"></p>  -->
+      <ul>
+        <% Tasks.forEach(function(item,i) { %>
+          <li><%= item %> <input type="checkbox" style="margin-bottom: 25px;"  <% if (Done[i]) { %>checked<%}%> id="<%= i %>" onclick="CheckBox('<%= Tasks[i] %> ','<%= i %>')"> <% if(Done[i]){ %> <span style="color: white; border: 1px solid green; background-color: green; font-weight: 600; margin-left: 10px;">Task Completed</span> <% } else{ %> <span style="color: white; background-color: red; font-weight:800; margin-left: 10px; border: 1px solid red;">Task Not Completed</span> <%} %> </li> 
+        <% }); %>
+      </ul>
+  
+ 
+  
+ </div>
+  <script src="/DataList.js"></script>
+  
+</body>
+</html>

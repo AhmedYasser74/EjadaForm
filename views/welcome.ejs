@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="/Form.css">
+<body>
+    <h1>Hello Ejada Employee <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTAeh_Pcb7F2yQ6XPh9x3P1BlQhktpAPuV_6CJRtK_2pA&s" id="ejada"> </h1>
+   
+    <form action="http://localhost:5500/submit"  method="POST" id="signup" >
+        <label for="FName" style="color: darkblue;"><b>First Name: </b></label>
+  <input type="text" name="FName"  id="FName" onfocus="value=''" onchange="CheckName(id,'err')" > <span id="err"></span><br><br>
+  <label for="LName" style="color: darkblue;"><b>Last Name:</b></label>
+  <input type="text" name="LName"  id="LName" onchange="CheckName(id,'err2')"><span id="err2"></span><br><br>
+  <label for="password" style="color: darkblue;" ><b>&nbsp;&nbsp;Password:</b></label>
+  <input type="password" name="Password"  id="Number" > 
+  <input type="checkbox" id="CheckBox" name="CheckBox" onchange="Pass()"> <label for="CheckBox" id="CheckBox"> Show Password</label> <span id="err3"></span> <br> <br>
+
+  <button  type="button"  id="submit" onclick="Signin()"  > <b>Login</b></button>
+
+ 
+    </form>
+
+    <div id="errorMessage" style=" position: absolute; left:70px;left: 280px; font-weight: 900; bottom: 245px; color: red;"> <span> <%= ERR %></span></div>
+
+
+
+    <a href="http://localhost:5500/Signup" style="position: absolute;top: 400px; left: 60px; color: darkblue; font-weight: 600;" onclick="">Don't Have an account?SignUp</a>
+
+
+    <script src="/DataCheck.js"></script>
+   
+</body>
+</html>

@@ -1,0 +1,22 @@
+#lists{
+    color: darkblue;
+}
+
+
+#H1{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 40px;
+    border: 2px solid darkblue;
+    height: 100px;
+    width: 700px;
+    margin-left: 400px;
+    background-color: darkblue;
+    color: white;
+}
+
+#ejada{
+    width: 50px;;
+    position: relative;
+    top: 14px;
+}
